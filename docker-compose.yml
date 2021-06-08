@@ -15,4 +15,13 @@ services:
             - vue-cli-node-volume:/app/node_modules
         tty: true
 
+    node:
+        build:
+            context: ./docker/node
+        container_name: node_practice
+        ports:
+            - "8100:8100"
+        volumes:
+            - ./node:/app/
+        tty: true
         
